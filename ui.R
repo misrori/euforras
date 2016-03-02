@@ -35,7 +35,7 @@ shinyUI(fluidPage(
   
     ),
 
-    # Show a plot of the generated distribution
+    # Show the table
     mainPanel(
       
        dataTableOutput("distPlot")

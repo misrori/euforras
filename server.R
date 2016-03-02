@@ -1,7 +1,7 @@
 
 library(shiny)
 library(data.table)
-library(pander)
+
 shinyServer(function(input, output) {
   
   d2020 <-data.table( read.csv("eu.csv", header = T,sep = ",", fileEncoding = 'UTF-8'))
@@ -41,7 +41,7 @@ shinyServer(function(input, output) {
   output$distPlot <- renderDataTable({
     
     dd()
-  }, options = list(orderClasses = TRUE, lengthMenu = c(10,50,500,5000, 10000, 100000, 150000, 1000000), pageLength = 5))
+  }, options = list(orderClasses = TRUE, lengthMenu = c(10,50,500,5000, 10000, 100000 ), pageLength = 5))
   
   
   
